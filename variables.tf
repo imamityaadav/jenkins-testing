@@ -1,4 +1,26 @@
 variable "name" {
+  type        = string
+  description = "Name of the VPC"
+}
+
+variable "project" {
+  type        = string
+  description = "Name of project this VPC is meant to house"
+}
+
+variable "environment" {
+  type        = string
+  description = "Name of environment this VPC is targeting"
+}
+
+variable "region" {
+  type        = string
+  description = "Region of the VPC"
+}
+
+variable "cidr_block" {
+  type        = string
+  description = "CIDR block for the VPC"variable "name" {
   default     = "test-vpc"
   type        = string
   description = "Name of the VPC"
@@ -34,32 +56,35 @@ variable "availability_zone_one" {
   description = "List of availability zone 1"
 }
 
+
+}
+
+variable "availability_zone_one" {
+  type        = string
+  description = "List of availability zone 1"
+}
+
 variable "availability_zone_two" {
-  default     = "ap-south-1b"
   type        = string
   description = "List of availability zone 2"
 }
 
 variable "public_subnet_a_cidr_blocks" {
-  default     = "10.0.0.0/24"
   type        = string
   description = "public subnet 1a CIDR blocks"
 }
 
 variable "public_subnet_b_cidr_blocks" {
-  default     = "10.0.1.0/24"
   type        = string
   description = "public subnet 1b CIDR blocks"
 }
 
 variable "private_subnet_a_cidr_blocks" {
-  default     = "10.0.2.0/24"
   type        = string
   description = "private subnet 1a CIDR blocks"
 }
 
 variable "private_subnet_b_cidr_blocks" {
-  default     = "10.0.3.0/24"
   type        = string
   description = "private subnet 1b CIDR blocks"
 }
