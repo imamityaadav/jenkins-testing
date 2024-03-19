@@ -26,7 +26,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/juleshkumar/jenkins-test.git'
+                git branch: 'main', url: 'https://github.com/imamityaadav/jenkins-testing.git'
             }
         }
         stage('Terraform init') {
